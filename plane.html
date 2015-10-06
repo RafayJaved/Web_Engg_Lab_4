@@ -1,0 +1,54 @@
+
+<html>
+<head>
+<title>Lab_4</title>
+<link rel="stylesheet" href="css1.css" />
+	
+<script type="text/javascript">
+			function moveSelection(event) {                    
+                switch (event.keyCode) {
+                    case 37:
+                        var element = document.getElementById("image1");
+						element.style.left = parseInt(element.style.left) - 20 + 'px';
+                    break;
+
+                    case 39:
+                        var element = document.getElementById("image1");
+						element.style.left = parseInt(element.style.left) + 20 + 'px';
+                    break;
+
+                    case 38:
+                        var element = document.getElementById("image1");
+						element.style.top = parseInt(element.style.top) - 20 + 'px';
+                    break;
+
+                    case 40:
+                        var element = document.getElementById("image1");
+						element.style.top = parseInt(element.style.top) + 20 + 'px';
+                    break;
+                }
+            };
+			
+		function loop(){
+			window.addEventListener("keydown", moveSelection);
+		}	
+  </script>
+
+</head>
+<body onload="loop()">
+
+
+<div id="animate-area">
+<div id="bar1"></div>
+<div id="bar2"></div>
+<div id="bar3"></div>
+<div id="bar4"></div>
+</div>
+
+<div id="p" class="">
+<img id="image1" src="plane.png" style="position: absolute; left: 15; right: 15; top: 15; bottom: auto; " height="100" width="200">
+</div>
+
+
+</body>
+</html>

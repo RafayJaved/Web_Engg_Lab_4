@@ -1,0 +1,104 @@
+
+
+#animate-area	{ 
+	position: relative;
+	width: 100%; 
+	height: 100%;
+	z-index:0;
+	background-image: url(image1.jpg);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
+
+	animation: animatedBackground 5s linear infinite;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 0; }
+}
+
+
+
+#bar1{
+	position: absolute;
+	top : 0px;
+	left: 460px;
+	width: 128px;
+	height: 128px;
+	background-image: url("ene.png");
+
+	background-repeat: repeat-x;
+	transform : x ;
+	animation-delay: 2s;
+	animation : bar1a 5s linear infinite ;
+}
+
+#bar2{
+	position: absolute;
+	top : 320px;
+	left: 800px;
+	width: 128px;
+	height: 128px;
+	background-image: url("ene.png");
+	background-repeat: repeat-x;
+	transform : x ;
+	animation-delay: 5s;
+	animation : bar2a 8s linear infinite ;
+}
+#bar3{
+	position: absolute;
+	top : 450px;
+	left: 160px;
+	width: 128px;
+	height: 128px;
+	background-image: url("ene.png");
+	background-repeat: repeat-x;
+	transform : x ;
+	animation-delay: 2s;
+	animation : bar3a 10s linear infinite ;
+
+}
+#bar4{
+	position: absolute;
+	top : 250px;
+	left: 60px;
+	width: 128px;
+	height: 128px;
+	background-image: url("ene.png");
+	background-repeat: repeat-x;
+	transform : x ;
+	animation-delay: 3s;
+	animation : bar4a 10s linear infinite ;
+
+}
+
+
+@-webkit-keyframes bar1a {
+	0%   { top:0% ;left:100%}
+    25%  {	top:15%;left:75%;}
+    50%  {	top:30%;left:50%;}
+	75%  {	top:45%;left:25%;}
+	100% { top:60% ; left:0%;
+}
+
+@-webkit-keyframes bar2a {
+	0%   { top:100% ;left:100%}
+    25%  {	top:75%;left:75%;}
+    50%  {	top:40%;left:50%;}
+	75%  {	top:25%;left:25%;}
+	100% { top:10% ; left:0%;}
+}	
+@-webkit-keyframes bar3a {
+	0%   { top:50% ;left:100%}
+    25%  {	top:50%;left:75%;}
+    50%  {	top:50%;left:50%;}
+	75%  {	top:50%;left:25%;}
+	100% { top:50% ; left:0%;}
+}	
+@-webkit-keyframes bar4a {
+	0%   { top:30% ;left:100%}
+    25%  {	top:55%;left:75%;}
+    50%  {	top:60%;left:50%;}
+	75%  {	top:75%;left:25%;}
+	100% { top:90% ; left:0%;}
+}	

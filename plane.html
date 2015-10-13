@@ -5,26 +5,85 @@
 <link rel="stylesheet" href="css1.css" />
 	
 <script type="text/javascript">
+
+			setInterval(function(){
+			var element = document.getElementById("image1");
+			var element1 = document.getElementById("barq");
+			var element2= document.getElementById("barp");
+			var rect = element.getBoundingClientRect ();
+			var rect1 = element1.getBoundingClientRect ();
+			var rect2 = element2.getBoundingClientRect ();
+			if(rect.right >= rect1.left && rect.top >= rect1.top && rect.top <= rect1.bottom && rect.left <= rect1.left){
+			window.open("game.html","_self");
+			}
+			
+			if(rect.right >= rect2.left && rect.top >= rect2.top && rect.top <= rect2.bottom && rect.left <= rect2.left){
+			window.open("game.html","_self");
+			}
+			
+			}, 33)
 			function moveSelection(event) {                    
                 switch (event.keyCode) {
                     case 37:
                         var element = document.getElementById("image1");
+						var element1 = document.getElementById("animate-area");
+						var rect = element.getBoundingClientRect ();
+						var rect1 = element1.getBoundingClientRect ();
+						x = rect1.left + 20;
+						y = rect.left;
+						if(y <= x){ 
+						element.style.left = parseInt(element.style.left) + 20 + 'px';
+						}
+						else{ 
 						element.style.left = parseInt(element.style.left) - 20 + 'px';
+						}
                     break;
 
                     case 39:
-                        var element = document.getElementById("image1");
+						var element = document.getElementById("image1");
+						var element1 = document.getElementById("animate-area");
+						var rect = element.getBoundingClientRect ();
+						var rect1 = element1.getBoundingClientRect ();
+						x = rect1.right - 20;
+						y = rect.right;
+						if(y >= x){ 
+						element.style.left = parseInt(element.style.left) - 20 + 'px';							
+						}
+						else{ 
 						element.style.left = parseInt(element.style.left) + 20 + 'px';
+						}
+                       
                     break;
 
                     case 38:
                         var element = document.getElementById("image1");
+						var element1 = document.getElementById("animate-area");
+						var rect = element.getBoundingClientRect ();
+						var rect1 = element1.getBoundingClientRect ();
+						x = rect1.top + 20;
+						y = rect.top;
+						if(y <= x){ 
+						element.style.top = parseInt(element.style.top) + 20 + 'px';
+						}
+						else{ 
 						element.style.top = parseInt(element.style.top) - 20 + 'px';
+						}
+		
                     break;
 
                     case 40:
-                        var element = document.getElementById("image1");
+						var element = document.getElementById("image1");
+						var element1 = document.getElementById("animate-area");
+						var rect = element.getBoundingClientRect ();
+						var rect1 = element1.getBoundingClientRect ();
+						x = rect1.bottom - 20;
+						y = rect.bottom;
+						if(y >= x){ 
+						element.style.top = parseInt(element.style.top) - 20 + 'px';
+						}
+						else{ 
 						element.style.top = parseInt(element.style.top) + 20 + 'px';
+						}
                     break;
                 }
             };
@@ -39,10 +98,9 @@
 
 
 <div id="animate-area">
-<div id="bar1"></div>
-<div id="bar2"></div>
-<div id="bar3"></div>
-<div id="bar4"></div>
+<div id="bar1"><img id="barq" src="ene.png" ></div>
+<div id="bar2"><img id="barp" src="ene.png" ></div>
+
 </div>
 
 <div id="p" class="">
